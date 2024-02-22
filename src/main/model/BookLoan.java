@@ -5,7 +5,8 @@ package main.model;
 import java.time.LocalDate;
 
 /**
- * A classe BookLoan representa um empréstimo de livro realizado por um usuário.
+ * A classe BookLoan representa um empréstimo de livro realizado por um usuário. Optei por fazer uma terceira classe para
+ * explorar a relação One-to-One entre o usuário e o livro.
  * Cada empréstimo possui informações sobre o usuário, o livro, a data de locação, a data de devolução e o prazo de devolução.
  */
 public class BookLoan {
@@ -25,6 +26,11 @@ public class BookLoan {
 		this.rentalDate = rentalDate;
 		this.deadline = deadline;
 	}
+	
+    @Override
+    public String toString() {
+        return "Empréstimo do livro " + book + ". Realizado dia: " + rentalDate + ". Pelo usuário: " + user;
+    }
 
 	//Getters e Setters
 	public User getUser() {

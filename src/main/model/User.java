@@ -20,6 +20,11 @@ public class User {
 		this.birth = birth;
 	}
 	
+    @Override
+    public String toString() {
+        return name;
+    }
+	
 	//Getters e Setters
 
 	public String getName() {

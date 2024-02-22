@@ -2,6 +2,7 @@ package main.model;
 
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -22,7 +23,13 @@ public class Author {
 		this.name = name;
 		this.birth = birth;
 		this.nationality = nationality;
+		this.books = new ArrayList<>();
 	}
+	
+    @Override
+    public String toString() {
+        return name;
+    }
 	
 	//Getters e Setters
 

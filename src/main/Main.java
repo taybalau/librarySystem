@@ -35,9 +35,13 @@ public class Main {
  
         BookLoan bookLoanSilmarrilion = library.newLoanBook(user, bookSilmarillion, LocalDate.now(), deadline);
         
-        //Tentar fazer um empréstimo com um livro já alugado
+        //Tentar fazer mais de um empréstimo.
         
         BookLoan bookLoanHobbit = library.newLoanBook(user, bookHobbit, LocalDate.now(), deadline);
+        
+        //Tentar fazer um empréstimo de um livro já alugado.
+        
+        BookLoan newBookLoanSilmarrilion = library.newLoanBook(user, bookSilmarillion, LocalDate.now(), deadline);
         
         //Devolver o livro alugado
         
